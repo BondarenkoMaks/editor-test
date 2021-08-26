@@ -86,8 +86,8 @@ class EditorJsContainer extends React.PureComponent {
       readOnly,
       tools: extendTools,
       holder: this.holder,
-      onReady: enableReadOnly ? undefined : this.handleReady,
-      onChange: enableReadOnly ? undefined : (api) => this.handleChange(api),
+      onReady: this.handleReady,
+      onChange: (api) => this.handleChange(api),
       ...props,
     });
 
